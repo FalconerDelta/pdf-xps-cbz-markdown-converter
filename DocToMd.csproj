@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+<PropertyGroup>
+  <OutputType>WinExe</OutputType>
+  <TargetFramework>net8.0-windows</TargetFramework> <!-- or net9.0-windows -->
+  <UseWindowsForms>true</UseWindowsForms>
+  <ImplicitUsings>enable</ImplicitUsings>
+  <Nullable>enable</Nullable>
+  <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+</PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MuPDF.NET" Version="3.28.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="MuPDF.NET">
+      <HintPath>C:\Users\Conrad\.nuget\packages\mupdf.net\3.28.2.4\lib\net8.0\MuPDF.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

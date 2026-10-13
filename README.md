@@ -30,15 +30,32 @@ Powered by **MuPDF.NET**, this application runs locally, handles DPI-scaling gra
 
 ## Building & Publishing
 
-To build an ultra-lightweight, standalone, single-file executable with aggressive size optimizations and trimming enabled, run the following command in your terminal:
+To build a streamlined, single-file executable that relies on a shared .NET runtime, run the following command in your terminal:
 
 ```bash
-dotnet publish -c Release -r win-x64 --self-contained true \
-  -p:PublishSingleFile=true \
-  -p:PublishTrimmed=true \
-  -p:TrimMode=link \
-  -p:EnableCompressionInSingleFile=true \
-  -p:PublishReadyToRun=false \
-  -p:InvariantGlobalization=true \
-  -p:IncludeNativeLibrariesForSelfExtract=true \
-  -p:_SuppressWinFormsTrimError=true
+dotnet publish -c Release -r win-x64 --self-contained false /p:PublishSingleFile=true
+```
+
+The resulting compiled single-file `.exe` will be located under `bin\Release\net8.0\win-x64\publish\`.
+
+---
+
+## Usage
+
+1. Launch **DocToMd**.
+2. **Select or Drag & Drop** a supported document (`.pdf`, `.xps`, or `.cbz`) into the window.
+3. Choose your desired **Detail Level** (Minimal, Default, or Full).
+4. (Optional) Adjust the **Min Image Size Filter** pixel threshold to fine-tune diagram extraction.
+5. Click **Convert to Markdown**. A dedicated folder containing your `.md` file and clean image assets will be created automatically.
+
+---
+
+## Acknowledgments
+
+* Coded and engineered in collaboration with **Google Gemini** (October 2026).
+
+---
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.

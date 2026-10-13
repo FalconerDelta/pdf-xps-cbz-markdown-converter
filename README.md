@@ -58,4 +58,6 @@ The resulting compiled single-file `.exe` will be located under `bin\Release\net
 
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**. 
+
+Because this utility relies on **MuPDF** (which is distributed under the AGPL license), any derivative distribution of this software must also comply with AGPL terms. See the [LICENSE](LICENSE) file for more details.
